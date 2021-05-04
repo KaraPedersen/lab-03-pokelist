@@ -1,22 +1,22 @@
-import { Component } from 'react';
-import PokeItem from './PokeItem';
-import './PokeList.scss';
+import React, { Component } from 'react';
+import PokemonItem from './PokemonItem';
+import './PokemonList.scss';
 
-export default class PokeList extends Component {
+
+class PokemonList extends Component {
 
   render() {
-    const characters = this.props.characters;
+    const { pokemon } = this.props;
 
     return (
-      <div>
-        <ul className="PokeList">
-          {characters.map(character => (
-            <PokeItem key={character.Name}
-              character={character} />
-          ))}
-        </ul>
-      </div>
+      <ul className="PokemonList">
+        {pokemon.map(pokemon => (
+          <PokemonItem key={pokemon._id} pokemon={pokemon} />
+        ))}
+      </ul>
     );
   }
 
 }
+
+export default PokemonList;
