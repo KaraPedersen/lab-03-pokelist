@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import './PokeItem.scss';
+import './PokemonItem.scss';
 
-class VillagerItem extends Component {
+class PokemonItem extends Component {
 
   render() {
-    const { villager } = this.props;
+    const { pokemon } = this.props;
 
     return (
-      <li className="VillagerItem">
-        <h2>{villager.name}</h2>
-        <p className="japanese-name">{villager.japaneseName}</p>
+      <li className="PokemonItem">
+        <h2>{pokemon.pokemon}</h2>
 
-        <p className="speech-bubble">{villager.phrase}</p>
 
         <img
-          src={villager.image}
-          alt={villager.name}
+          src={pokemon.url_image}
+          alt={pokemon.pokemon}
         />
 
       </li>
@@ -24,4 +22,4 @@ class VillagerItem extends Component {
 
 }
 
-export default VillagerItem;
+export default PokemonItem;
