@@ -1,9 +1,10 @@
 import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Paging from './Paging';
-import PokeList from '../PokeList/PokeList';
-import Search from './Search';
+// import Paging from './Paging';
+import PokemonPage from '../Pokemon/PokemonPage';
+// import Search from './Search';
+// import request from 'superagent';
 import './App.scss';
 
 
@@ -13,20 +14,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-
-        <section className="search-options">
-          <Search onSearch={this.handleSearch} />
-          {/* <Paging
-            page={page}
-            onPrev={this.handlePrevPage}
-            onNext={this.handleNextPage} /> */}
-        </section>
-        <main></main>
+        <PokemonPage />
         <Footer />
       </div>
     );
   }
-
 }
 
 export default App;
